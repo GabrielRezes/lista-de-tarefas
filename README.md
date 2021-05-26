@@ -11,7 +11,7 @@ Este é um pequeno projeto colocando em prática conceitos básicos de:
 
 ### Atualizações
 
-Esse repositório contará com atualizações com objetivo de implementar mais funções a aplicação, buscando também aprimorar principios **S.O.L.I.D** e conceitos de **Clean Code**.
+Esse repositório contará com atualizações com objetivo de implementar mais funções a aplicação, buscando também aprimorar princípios **S.O.L.I.D** e conceitos de **Clean Code**.
 
 Tecnologias a serem implementadas no projeto:
 - React

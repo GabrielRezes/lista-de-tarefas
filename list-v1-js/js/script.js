@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnAdd = document.querySelector('.button');
 
     todoText.onblur = onChangeText;
-    btnAdd.onclick = onAddTodo
+    btnAdd.onclick = onAddTodo;
    
 
     // ----- Estado Inicial -----
