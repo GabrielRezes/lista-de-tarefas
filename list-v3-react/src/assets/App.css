@@ -1,0 +1,9 @@
+.app {
+    box-sizing: border-box;
+    font-family: consolas, "Courier New";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+}
