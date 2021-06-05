@@ -4,16 +4,19 @@ import './form.css';
 class Form extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            todo:[]
-        }        
+        this.text = '';
     }
 
-    addTodo({target}){       
-        const currentTodo = target.value.replace(/\./g, '').trim();  
-        console.log(currentTodo)
-    }     
-    
+    handleTextChange({target}){           
+        const capturedText = target.value.replace(/\./g, '').trim();  
+        this.text = capturedText; 
+        target.value = '';                    
+    }    
+
+    handleTextValidation() {
+        if(!this.text) return alert('Digite Algo')
+        this.props.text(this.text);                 
+    }
 
     render() {
         return(
@@ -26,10 +29,11 @@ class Form extends Component {
                 className='input'
                 type='text'
                 placeholder='What Do You Want To Do?'
-                onChange={this.addTodo.bind(this)}/>
-                                
-               <button 
-                className='btn'>
+                onBlur={this.handleTextChange.bind(this)}/>                                
+               <button
+                className='btn'
+                onClick={this.handleTextValidation.bind(this)}
+               >
                 Add
                 </button>                 
             </>

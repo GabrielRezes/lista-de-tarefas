@@ -1,13 +1,26 @@
 import React, {Component} from 'react';
-// import '/list.css';
+import './list.css';
 
-class List extends Component {
+class List extends Component {    
+
+    handleDeleteTodo(index) {
+        this.props.deleteTodo(index)     
+    }
+   
     render() {
         return(
-            <ul>                
-                <li>
-                    <p>Oi</p>    
-                </li>
+            <ul className='ul' > 
+                {this.props.todoList.map((item, index) => {                                    
+                   return (
+                        <li 
+                         className='li'
+                         key={index}
+                         onClick={() => this.handleDeleteTodo(index)}>                             
+                            <p className='p'>{item}</p>                                                     
+                        </li>
+                    ) 
+                                          
+                })}  
             </ul>
         )
     };        
